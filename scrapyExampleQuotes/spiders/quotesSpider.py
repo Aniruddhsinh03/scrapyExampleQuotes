@@ -2,6 +2,7 @@
 import scrapy
 
 
+# store all information at last in yield .
 def parse_author_contents(response):
     comment = response.meta['Comment']
     tags = response.meta['Tags']
@@ -19,17 +20,21 @@ class QuotesSpider(scrapy.Spider):
     start_urls = ['http://quotes.toscrape.com/']
 
     def parse(self, response):
+        # retrieving all quotes sections in quotes variable
         quotes = response.xpath('//*[@class="quote"]')
+        # using for loop retrieving each of quote
         for quote in quotes:
             comment = quote.xpath('.//*[@class="text"]/text()').extract_first()
             tags = quote.xpath('.//*[@class="keywords"]/@content').extract()
             author = quote.xpath('.//*[@class="author"]/text()').extract_first()
             author_link = quote.xpath('.//a/@href').extract_first()
 
-            yield {'Comment': comment, 'Tags': tags, 'Author': author}
+            # each of quote have author information which is hyperlink,so visit that author page.
+            # visit author page and call method parse_author_contents for scraping author information.
             yield scrapy.Request(response.urljoin(author_link), callback=parse_author_contents,
                                  meta={'Comment': comment, 'Tags': tags, 'Author': author})
 
+        # retrieving next page url and attach with mail url and visit all pages.
         next_page_url = response.xpath('//*[@class="next"]/a/@href').extract_first()
         absolute_next_page_url = response.urljoin(next_page_url)
         yield scrapy.Request(absolute_next_page_url)
