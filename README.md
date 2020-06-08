@@ -3,6 +3,20 @@ This is a Scrapy project to scrape quotes and author information from  http://qu
 
 This project is only meant for educational purposes.
 
+## Selection 
+
+Main Site
+
+
+![Image of Quotes](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_1.jpg)
+
+Quotes Selection
+
+![Image of Quotes Selection](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_2.jpg)
+
+Comment Selection
+
+![Image of Comment Selection](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_3.jpg)
 
 ## Extracted data
 
