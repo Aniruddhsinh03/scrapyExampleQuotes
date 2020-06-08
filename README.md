@@ -18,6 +18,20 @@ Comment Selection
 
 ![Image of Comment Selection](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_3.jpg)
 
+Author Selection
+
+![Image of Author Selection](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_4.jpg)
+
+Tags Selection
+
+![Image of Tags Selection](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_5.jpg)
+
+Author Details Selection
+
+![Image of Author Details Selection](https://github.com/Aniruddhsinh03/scrapyExampleQuotes/blob/master/screenshots/quotes_6.jpg)
+
+
+
 ## Extracted data
 
 This project extracts quotes, combined with the respective author names and tags.
